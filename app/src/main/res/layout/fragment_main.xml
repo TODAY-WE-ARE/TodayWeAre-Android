@@ -38,14 +38,14 @@
             android:src="@drawable/shape_white_fill_30_rect"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_top" />
+            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
         <TextView
             android:id="@+id/tv_main_person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="120dp"
-            android:text="인원"
+            android:text="@string/person"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="@id/iv_main_box_1"
             app:layout_constraintStart_toStartOf="@id/iv_main_box_1"
@@ -187,6 +187,45 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_main_box_3" />
 
+        <TextView
+            android:id="@+id/iv_main_box_4_inside_mor"
+            android:layout_width="60dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="30dp"
+            android:text="아침"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintBottom_toBottomOf="@id/iv_main_box_4"
+            app:layout_constraintStart_toStartOf="@id/iv_main_box_4"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_4" />
+
+        <TextView
+            android:id="@+id/iv_main_box_4_inside_aft"
+            android:layout_width="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_height="30dp"
+            android:text="점심"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintBottom_toBottomOf="@id/iv_main_box_4"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_4_inside_mor"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_4" />
+
+        <TextView
+            android:id="@+id/iv_main_box_4_inside_din"
+            android:layout_width="60dp"
+            android:layout_marginEnd="70dp"
+            android:layout_height="30dp"
+            android:text="저녁"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_purple_fill_30_active"
+            app:layout_constraintBottom_toBottomOf="@id/iv_main_box_4"
+            app:layout_constraintEnd_toEndOf="@id/iv_main_box_4"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_4" />
+
         <ImageView
             android:id="@+id/iv_main_box_5"
             android:layout_width="match_parent"
@@ -250,6 +289,71 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_main_box_5" />
+
+        <TextView
+            android:id="@+id/iv_main_box_6_1"
+            android:layout_width="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="30dp"
+            android:text="활발한"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintStart_toStartOf="@id/iv_main_box_6"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_6" />
+
+        <TextView
+            android:id="@+id/iv_main_box_6_2"
+            android:layout_width="80dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="30dp"
+            android:text="아기자기한"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_1"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_6" />
+
+        <TextView
+            android:id="@+id/iv_main_box_6_3"
+            android:layout_width="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="30dp"
+            android:text="로맨틱한"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_purple_fill_30_active"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_2"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_6" />
+
+        <TextView
+            android:id="@+id/iv_main_box_6_4"
+            android:layout_width="60dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="30dp"
+            android:text="감성적인"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_purple_fill_30_active"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_3"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_6" />
+
+        <TextView
+            android:id="@+id/iv_main_box_6_5"
+            android:layout_width="55dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginStart="8dp"
+            android:layout_height="30dp"
+            android:text="정적인"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_4"
+            app:layout_constraintTop_toTopOf="@id/iv_main_box_6" />
 
         <ImageView
             android:id="@+id/iv_main_recommend"
