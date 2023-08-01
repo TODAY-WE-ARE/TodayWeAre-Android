@@ -2,4 +2,5 @@
     <string name="app_name">Android-today</string>
 
     <string name="binding_error_msg">Binding not initialized to reference the view.</string>
+    <string name="person">인원</string>
 </resources>
