@@ -1,13 +1,119 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.android.today.presentation.scrap.RecommendFragment">
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.android.today.presentation.scrap.RecommendViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:background="@color/today_purple_1">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/iv_recommend_top"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/shape_white_fill_0_rect"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/iv_recommend_pick"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="찜"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
+
+        <TextView
+            android:id="@+id/iv_main_box_chu"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="추천"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/iv_recommend_pick"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
+
+
+        <ImageView
+            android:id="@+id/iv_main_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_logo"
+            app:layout_constraintBottom_toBottomOf="@id/iv_recommend_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_recommend_star"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="별점순"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+
+        <TextView
+            android:id="@+id/tv_recommend_km"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="거리순"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_recommend_star"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+
+        <TextView
+            android:id="@+id/tv_recommend_popular"
+            android:layout_width="115dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="거리순"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_recommend_km"
+            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recommend_star"
+            tools:listitem="@layout/item_recommend" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
