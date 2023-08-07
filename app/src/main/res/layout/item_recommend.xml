@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.android.today.data.Recommend" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shape_white_fill_30_rect">
+
+        <ImageView
+            android:id="@+id/iv_recommend_image"
+            setCircleImage="@{data.image}"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_recommend_stars"
+            android:src="@drawable/iv_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/iv_recommend_image"
+            app:layout_constraintBottom_toBottomOf="@id/cl_recommend"
+            app:layout_constraintStart_toStartOf="@id/cl_recommend"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"/>
+
+        <ImageView
+            android:id="@+id/ic_recommend_heart"
+            android:src="@drawable/ic_heart_inactive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="@id/cl_recommend"
+            app:layout_constraintEnd_toEndOf="@id/cl_recommend"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_recommend_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.place}"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/cl_recommend"
+            app:layout_constraintEnd_toStartOf="@id/ic_recommend_heart"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            tools:text="혜화 (hyehwa)"/>
+
+        <TextView
+            android:id="@+id/tv_recommend_content_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_recommend_place"
+            app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
+            tools:text="연극 '옥탑방 고양이'"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_recommend_content_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_recommend_content_1"
+            app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
+            tools:text="카페 - 에이라운드"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_recommend_content_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_recommend_content_2"
+            app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
+            tools:text="저녁 - 피터팬스테이크"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="7dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
