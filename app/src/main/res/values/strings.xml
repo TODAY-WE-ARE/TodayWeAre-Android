@@ -4,4 +4,5 @@
     <string name="binding_error_msg">Binding not initialized to reference the view.</string>
     <string name="person">인원</string>
     <string name="detail_content">오늘은 우리 열쩡걸 팀원들이랑 잠실에서 놀았다\n날이 너무 더웠는데 그래도 꽤 괜찮았다. 유미카츠에 가서 돈까스를 먹었는데 비쌌지만 너무 맛있었다 ㅠㅠ\n그리고 석촌호수를 걸었는데 롯데월드가 보여서 다음엔 우리끼리 롯데월드를 가기로 했다.\n이 조합 못 참아.... \n마지막으로 체력은 없었지만 방탈출 까지 했다.\n공포 방탈출이었는데 언니가 기절할 뻔 했다. \n솔직히 너무 재밌었고 다음에도 이 코스 그대로 또 놀고싶다.</string>
+    <string name="person">인원</string>
 </resources>
