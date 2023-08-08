@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vm"
+            type="com.android.today.presentation.scrap.RecommendViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main"
         android:layout_width="match_parent"
@@ -11,7 +19,7 @@
         android:background="@color/today_purple_1">
 
         <ImageView
-            android:id="@+id/iv_main_top"
+            android:id="@+id/iv_recommend_top"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:src="@drawable/shape_white_fill_0_rect"
@@ -27,8 +35,9 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:background="@drawable/shape_white_fill_30_inactive"
-            app:layout_constraintStart_toStartOf="@+id/iv_main_top"
-            app:layout_constraintTop_toTopOf="@+id/iv_main_top" />
+            app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
+
         <TextView
             android:id="@+id/iv_main_box_chu"
             android:layout_width="50dp"
@@ -40,8 +49,20 @@
             android:textColor="@color/black"
             android:background="@drawable/shape_white_fill_30_inactive"
             app:layout_constraintStart_toEndOf="@+id/iv_main_box_ggim"
-            app:layout_constraintTop_toTopOf="@+id/iv_main_top" />
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
+        <TextView
+            android:id="@+id/iv_recommend_pick"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="찜"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
         <ImageView
             android:id="@+id/iv_main_logo"
@@ -49,25 +70,25 @@
             android:layout_height="wrap_content"
             android:src="@drawable/iv_logo"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_main_top"
+            app:layout_constraintBottom_toBottomOf="@id/iv_recommend_top"
             app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
-            android:id="@+id/tv_main_box_1"
+            android:id="@+id/tv_recommend_star"
             android:layout_width="115dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
             android:gravity="center"
             android:text="별점순"
-            android:textSize="14sp"
             android:textColor="@color/black"
-            android:background="@drawable/shape_white_fill_30_inactive"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
         <TextView
-            android:id="@+id/tv_main_box_2"
+            android:id="@+id/tv_recommend_km"
             android:layout_width="115dp"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
@@ -77,34 +98,34 @@
             android:textSize="14sp"
             android:textColor="@color/black"
             android:background="@drawable/shape_white_fill_30_inactive"
-            app:layout_constraintStart_toEndOf="@+id/tv_main_box_1"
+            app:layout_constraintStart_toEndOf="@+id/tv_recommend_star"
             app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
         <TextView
-            android:id="@+id/tv_main_box_3"
+            android:id="@+id/tv_recommend_popular"
             android:layout_width="115dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
-            android:text="거리순"
-            android:textSize="14sp"
-            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
             android:background="@drawable/shape_white_fill_30_inactive"
-            app:layout_constraintStart_toEndOf="@+id/tv_main_box_2"
+            android:gravity="center"
+            android:text="인기순"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_recommend_km"
             app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recommend"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_main_top"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recommend_star"
             tools:listitem="@layout/item_recommend" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

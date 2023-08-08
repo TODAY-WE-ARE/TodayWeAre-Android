@@ -9,7 +9,8 @@
 
         <variable
             name="vm"
-            type="com.android.today.presentation.scrap.ScrapViewModel" /></data>
+            type="com.android.today.presentation.scrap.ScrapViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main"
