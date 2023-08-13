@@ -1,5 +1,6 @@
 package com.android.today.presentation.scrap
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -7,6 +8,7 @@ import com.android.today.R
 import com.android.today.data.Recommend
 import com.android.today.databinding.FragmentRecommendBinding
 import com.android.today.util.binding.BindingFragment
+import com.android.today.util.extension.setSingleOnClickListener
 
 class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fragment_recommend) {
     private val recommendViewModel: RecommendViewModel by viewModels()
@@ -16,11 +18,18 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
         binding.lifecycleOwner = viewLifecycleOwner
         binding.vm = recommendViewModel
         initAdapter()
+        initPickBtnClickListener()
     }
 
     private fun initAdapter() {
         binding.rvRecommend.adapter = recommendAdapter
         recommendAdapter.submitList(recommendedList)
+    }
+
+    private fun initPickBtnClickListener() {
+        binding.tvRecommendPick.setSingleOnClickListener {
+            startActivity(Intent(requireActivity(), ScrapFragment::class.java))
+        }
     }
 
     companion object {

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.android.today.data.Pick" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_main_box_6"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/shape_white_fill_30_rect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cl_main"/>
+
+        <TextView
+            android:id="@+id/tv_overlay_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.place}"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="75dp"
+            app:layout_constraintTop_toTopOf="@+id/iv_main_box_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="잠실(jamsil)"/>
+
+        <TextView
+            android:id="@+id/tv_overlay_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.content1}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overlay_text"
+            app:layout_constraintStart_toEndOf="@+id/iv_jamsil_1"
+            tools:text="롯데월드 아쿠아리움"/>
+
+        <TextView
+            android:id="@+id/tv_overlay_text_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.content2}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overlay_text_2"
+            app:layout_constraintStart_toEndOf="@+id/iv_jamsil_1"
+            tools:text="카페 - 진저베어"/>
+
+        <TextView
+            android:id="@+id/tv_overlay_text_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.content3}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overlay_text_3"
+            app:layout_constraintStart_toEndOf="@+id/iv_jamsil_1"
+            tools:text="저녁 - 아오리라멘"/>
+
+        <TextView
+            android:id="@+id/tv_overlay_text_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.km}"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_overlay_text_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="3.5km"/>
+
+        <ImageView
+            android:id="@+id/iv_jamsil_1"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="17dp"
+            setCircleImage="@{data.image}"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintStart_toStartOf="@+id/iv_main_box_6"
+            app:layout_constraintTop_toTopOf="@+id/iv_main_box_6"
+            tools:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/iv_heart_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_fullHeart"
+            app:layout_constraintStart_toStartOf="@+id/iv_main_box_6"
+            app:layout_constraintTop_toTopOf="@+id/iv_main_box_6"
+            android:layout_marginStart="325dp"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/iv_smallStar"
+            app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
+
+        <ImageView
+            android:id="@+id/iv_star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/iv_smallStar"
+            app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
+
+        <ImageView
+            android:id="@+id/iv_star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/iv_smallStar"
+            app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
+            app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

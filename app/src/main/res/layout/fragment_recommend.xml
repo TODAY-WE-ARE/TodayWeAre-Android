@@ -13,6 +13,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/today_purple_1">
@@ -25,7 +26,33 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/iv_recommend_pick"
+            android:id="@+id/iv_main_box_ggim"
+            android:layout_width="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_height="40dp"
+            android:text="찜"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
+
+        <TextView
+            android:id="@+id/tv_scrap_recommend"
+            android:layout_width="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            android:text="추천"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            app:layout_constraintStart_toEndOf="@+id/iv_main_box_ggim"
+            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
+
+        <TextView
+            android:id="@+id/tv_recommend_pick"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
@@ -37,28 +64,14 @@
             app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
-        <TextView
-            android:id="@+id/iv_main_box_chu"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/shape_white_fill_30_inactive"
-            android:gravity="center"
-            android:text="추천"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toEndOf="@+id/iv_recommend_pick"
-            app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
-
-
         <ImageView
             android:id="@+id/iv_main_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/iv_logo"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/iv_recommend_top"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <TextView
             android:id="@+id/tv_recommend_star"
@@ -78,13 +91,13 @@
             android:id="@+id/tv_recommend_km"
             android:layout_width="115dp"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/shape_white_fill_30_inactive"
+            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="거리순"
-            android:textColor="@color/black"
             android:textSize="14sp"
+            android:textColor="@color/black"
+            android:background="@drawable/shape_white_fill_30_inactive"
             app:layout_constraintStart_toEndOf="@+id/tv_recommend_star"
             app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
 
@@ -96,7 +109,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/shape_white_fill_30_inactive"
             android:gravity="center"
-            android:text="거리순"
+            android:text="인기순"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/tv_recommend_km"

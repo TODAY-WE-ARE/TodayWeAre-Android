@@ -2,7 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
     <data>
 
         <variable
@@ -97,8 +96,5 @@
             tools:text="저녁 - 피터팬스테이크"
             android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"/>
-
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
