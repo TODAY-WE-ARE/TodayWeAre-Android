@@ -2,7 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <data></data>
+    <data>
+        <variable
+            name="data"
+            type="com.android.today.data.Diary" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main"
@@ -25,7 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="124dp"
-            android:text="2023/5/13/sat"
+            android:text="@{data.date}"
+            tools:text="2023/08/01"
             android:textColor="@color/black"
             android:textSize="17dp"
             app:layout_constraintBottom_toBottomOf="@id/iv_diary_box_1"
@@ -38,7 +43,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="72dp"
-            android:text="<오늘은 팀원들이랑 맛집탐방~>"
+            android:text="@{data.content}"
+            tools:text="<오늘은 팀원들이랑 맛집탐방~>"
             android:textColor="@color/black"
             android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="@id/iv_diary_box_1"
