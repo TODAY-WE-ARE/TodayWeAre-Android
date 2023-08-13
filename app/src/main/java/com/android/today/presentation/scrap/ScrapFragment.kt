@@ -62,10 +62,5 @@ class ScrapFragment :
                 "술 - 칵테일바 헤엄"
             )
         )
-
-        /*private fun initScrapBtnClickListener() {
-            binding.tvMainBoxChu.setSingleOnClickListener {
-                startActivity(Intent(requireActivity(), RecommendFragment::class.java))
-            }
-        }*/
     }
+}
