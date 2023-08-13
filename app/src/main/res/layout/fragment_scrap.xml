@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_main_top" />
 
         <TextView
-            android:id="@+id/iv_main_box_chu"
+            android:id="@+id/tv_scrap_recommend"
             android:layout_width="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
