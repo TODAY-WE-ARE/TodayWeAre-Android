@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
         <TextView
-            android:id="@+id/iv_main_box_chu"
+            android:id="@+id/tv_scrap_recommend"
             android:layout_width="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
@@ -52,7 +52,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
         <TextView
-            android:id="@+id/iv_recommend_pick"
+            android:id="@+id/tv_recommend_pick"
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:layout_marginStart="15dp"
