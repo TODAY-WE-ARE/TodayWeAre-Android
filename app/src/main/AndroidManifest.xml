@@ -15,6 +15,11 @@
         <activity
             android:name=".presentation.main.ResultActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".presentation.diary.DiaryDetailActivity"
+            android:exported="false" />
+
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true">
