@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<data></data>
+
+    <data>
+
+        <import type="android.view.View" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_main"
         android:layout_width="match_parent"
@@ -16,23 +20,12 @@
             android:src="@drawable/shape_white_fill_0_rect"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_main_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/iv_logo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_main_top"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <TextView
             android:id="@+id/tv_main_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="my page"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="my page"
             app:layout_constraintBottom_toBottomOf="@id/iv_main_top"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,80 +35,66 @@
             android:id="@+id/tv_account_info"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="1"
             android:layout_marginTop="90dp"
+            android:layout_weight="1"
             android:background="@drawable/shape_white_fill_30_rect"
-            android:text="내 계정 정보"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="내 계정 정보"
             app:layout_constraintTop_toBottomOf="@id/iv_main_top" />
-
-        <!-- 여기서부터 코드 수정 -->
 
         <TextView
             android:id="@+id/tv_privacy_policy"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
+            android:layout_weight="1"
             android:background="@drawable/shape_white_fill_30_inactive"
-            android:text="개인정보 정책"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="개인정보 정책"
             app:layout_constraintTop_toBottomOf="@id/tv_account_info" />
 
         <TextView
             android:id="@+id/tv_contact"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
+            android:layout_weight="1"
             android:background="@drawable/shape_white_fill_30_rect"
-            android:text="문의"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="문의"
             app:layout_constraintTop_toBottomOf="@id/tv_privacy_policy" />
 
         <TextView
             android:id="@+id/tv_developer_info"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
+            android:layout_weight="1"
             android:background="@drawable/shape_white_fill_30_inactive"
-            android:text="개발자 정보"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="개발자 정보"
             app:layout_constraintTop_toBottomOf="@id/tv_contact" />
 
         <TextView
             android:id="@+id/tv_logout"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
+            android:layout_weight="1"
             android:background="@drawable/shape_white_fill_30_rect"
-            android:text="로그아웃"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="로그아웃"
             app:layout_constraintTop_toBottomOf="@id/tv_developer_info" />
 
         <TextView
             android:id="@+id/tv_withdrawal"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_weight="2"
             android:layout_marginTop="16dp"
+            android:layout_weight="2"
             android:background="@drawable/shape_white_fill_30_inactive"
-            android:text="탈퇴"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"
             android:gravity="center"
+            android:text="탈퇴"
             app:layout_constraintTop_toBottomOf="@id/tv_logout" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
