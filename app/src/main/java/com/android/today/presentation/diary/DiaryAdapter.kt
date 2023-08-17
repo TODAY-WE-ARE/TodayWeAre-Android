@@ -35,7 +35,7 @@ class DiaryAdapter(private val clickListener: ItemClickListener<Diary>) :
         fun onBind(data: Diary, itemClickListener: ItemClickListener<Diary>) {
             binding.data = data
             binding.root.setOnClickListener {
-                itemClickListener.onClick(bindingAdapterPosition, data)
+                itemClickListener.onClick(position, data)
             }
         }
     }
@@ -51,4 +51,3 @@ class DiaryAdapter(private val clickListener: ItemClickListener<Diary>) :
 fun interface ItemClickListener<T> {
     fun onClick(pos: Int, item: T)
 }
-
