@@ -12,4 +12,5 @@
     <color name="today_purple_2">#C3AACE</color>
     <color name="today_white_1">#D9C9DC</color>
     <color name="today_white_2">#F7F4F8</color>
+    <color name="today_gray">#4C4C4C</color>
 </resources>
