@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <import type="android.view.View" />
 
-        <variable
-            name="vm"
-            type="com.android.today.presentation.scrap.ScrapViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -39,7 +35,7 @@
             app:layout_constraintTop_toTopOf="@+id/iv_main_top" />
 
         <TextView
-            android:id="@+id/tv_scrap_recommend"
+            android:id="@+id/tv_recommend_scrap"
             android:layout_width="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
