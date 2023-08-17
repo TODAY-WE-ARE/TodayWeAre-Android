@@ -112,14 +112,70 @@
             app:layout_constraintStart_toEndOf="@id/tv_main_person"
             app:layout_constraintTop_toTopOf="@id/iv_main_box_2" />
 
-        <ImageView
-            android:id="@+id/iv_main_map"
+        <RadioGroup
+            android:id="@+id/rg_main_radiogroup"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/iv_map"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_box_2" />
+            app:layout_constraintTop_toBottomOf="@+id/iv_main_box_2">
+
+            <RadioButton
+                android:id="@+id/rb_main_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="강남" />
+
+            <RadioButton
+                android:id="@+id/rb_main_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="혜화" />
+
+            <RadioButton
+                android:id="@+id/rb_main_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="성수" />
+
+            <RadioButton
+                android:id="@+id/rb_main_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="을지로" />
+
+            <RadioButton
+                android:id="@+id/rb_main_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="잠실" />
+
+            <RadioButton
+                android:id="@+id/rb_main_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="16dp"
+                android:textColor="@color/today_gray"
+                android:buttonTint="@color/today_gray"
+                android:text="한남동" />
+
+        </RadioGroup>
 
         <ImageView
             android:id="@+id/iv_main_box_3"
@@ -129,7 +185,7 @@
             android:src="@drawable/shape_white_fill_30_rect"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_map" />
+            app:layout_constraintTop_toBottomOf="@id/rg_main_radiogroup" />
 
         <TextView
             android:id="@+id/tv_main_time"
@@ -187,9 +243,9 @@
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:layout_marginStart="70dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
             android:clickable="true"
             android:gravity="center"
-            android:background="@drawable/shape_white_fill_30_inactive"
             android:text="아침"
             app:layout_constraintBottom_toBottomOf="@id/iv_main_box_4"
             app:layout_constraintStart_toStartOf="@id/iv_main_box_4"
@@ -388,7 +444,7 @@
             android:background="@drawable/shape_purple_fill_30_active"
             android:gravity="center"
             android:text="가성비"
-            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_3"
+            app:layout_constraintStart_toEndOf="@id/iv_main_box_6_8"
             app:layout_constraintTop_toBottomOf="@id/iv_main_box_6_4" />
 
         <TextView
@@ -407,7 +463,7 @@
             android:id="@+id/tv_main_recommend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/shape_white_fill_30_inactive"
             android:paddingHorizontal="30dp"
             android:paddingVertical="10dp"
