@@ -8,7 +8,7 @@ import com.android.today.data.Diary
 import com.android.today.databinding.ItemDiaryListBinding
 import com.android.today.util.extension.ItemDiffCallback
 
-class DiaryAdapter :
+class DiaryAdapter(private val clickListener: ItemClickListener<Diary>) :
     ListAdapter<Diary, DiaryAdapter.DiaryViewHolder>(diaryDiffUtil) {
 
     override fun onCreateViewHolder(
@@ -27,13 +27,16 @@ class DiaryAdapter :
     }
 
     override fun onBindViewHolder(holder: DiaryViewHolder, position: Int) {
-        holder.onBind(getItem(position))
+        holder.onBind(getItem(position), clickListener)
     }
 
     class DiaryViewHolder(private val binding: ItemDiaryListBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: Diary) {
+        fun onBind(data: Diary, itemClickListener: ItemClickListener<Diary>) {
             binding.data = data
+            binding.root.setOnClickListener {
+                itemClickListener.onClick(bindingAdapterPosition, data)
+            }
         }
     }
 
@@ -44,3 +47,8 @@ class DiaryAdapter :
         )
     }
 }
+
+fun interface ItemClickListener<T> {
+    fun onClick(pos: Int, item: T)
+}
+

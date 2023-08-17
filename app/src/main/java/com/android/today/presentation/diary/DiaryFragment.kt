@@ -1,5 +1,6 @@
 package com.android.today.presentation.diary
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -11,7 +12,8 @@ import com.android.today.util.binding.BindingFragment
 class DiaryFragment :
     BindingFragment<FragmentDiaryListBinding>(R.layout.fragment_diary_list) {
     private val diaryViewModel: DiaryViewModel by viewModels()
-    private val diaryAdapter: DiaryAdapter = DiaryAdapter()
+    private val diaryAdapter: DiaryAdapter?
+        get() = binding.rvDiary.adapter as? DiaryAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -22,12 +24,12 @@ class DiaryFragment :
     }
 
     private fun initAdapter() {
-        binding.rvDiary.adapter = diaryAdapter
-        diaryAdapter.submitList(diaryList)
-
+        binding.rvDiary.adapter = DiaryAdapter { _, item ->
+            val toDetail = Intent(requireActivity(), DiaryDetailActivity::class.java)
+            startActivity(toDetail)
+        }
+        diaryAdapter?.submitList(diaryList)
     }
-
-
 
     companion object {
         private val diaryList = listOf(
