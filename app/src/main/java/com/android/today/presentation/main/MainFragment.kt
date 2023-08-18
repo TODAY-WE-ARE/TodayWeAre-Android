@@ -20,4 +20,10 @@ class MainFragment : BindingFragment<FragmentMainBinding>(R.layout.fragment_main
             startActivity(Intent(requireActivity(), ResultActivity::class.java))
         }
     }
+
+   /*private fun initMainRadioClickListener() {
+        binding.rgMainRadiogroup.setOnCheckedChangeListener { _, checkedId ->
+            setSelectedReasonId(checkedId)
+        }
+    }*/
 }
