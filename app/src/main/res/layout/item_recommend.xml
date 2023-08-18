@@ -20,15 +20,15 @@
 
         <ImageView
             android:id="@+id/iv_recommend_image"
-            setImage="@{data.image}"
             android:layout_width="110dp"
+            setImage="@{data.image}"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:scaleType="fitXY"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/black" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
             android:id="@+id/iv_recommend_stars"
