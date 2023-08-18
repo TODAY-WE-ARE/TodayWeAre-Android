@@ -1,7 +1,7 @@
 package com.android.today.data
 
 data class Pick(
-    val image: String,
+    val image: String?,
     val place: String,
     val km: String,
     val content1: String,

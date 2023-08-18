@@ -1,6 +1,6 @@
 package com.android.today.data
 
-data class Result(
+data class ResultData(
     val category: String,
     val place: String
 )
