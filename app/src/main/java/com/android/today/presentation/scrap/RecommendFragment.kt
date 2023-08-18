@@ -1,6 +1,7 @@
 package com.android.today.presentation.scrap
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.viewModels
 import com.android.today.R
@@ -35,9 +36,8 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
                 tvRecommendStar.visibility = View.GONE
                 tvRecommendKm.visibility = View.GONE
                 tvRecommendPopular.visibility = View.GONE
-                if (tvRecommendPick.isSelected) {
-                }
             }
+            Log.d("asdf", scrapList.toString())
         }
     }
 
@@ -50,8 +50,6 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
                 tvRecommendStar.visibility = View.VISIBLE
                 tvRecommendKm.visibility = View.VISIBLE
                 tvRecommendPopular.visibility = View.VISIBLE
-                if (tvRecommendRecommend.isSelected) {
-                }
             }
         }
     }
@@ -70,7 +68,7 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
                 "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MTlfMjIz%2FMDAxNjg5NzYwNjAwNzcw.u94O38YI-hUBKKrtE4niyCWwEVT_-yLX-QmmhSvHD6Ig.FHmxXajwSAt3i7tJV36ZT7_GE1ygKqpO6OKk8viNp8sg.JPEG.kde7878%2FIMG_4249.jpg&type=a340",
                 "강남",
                 "1.5km",
-                "점심 - 하이디라오",
+                "저녁 - 하이디라오",
                 "메가박스 영화",
                 "카페 - 탐앤탐스"
             ),
@@ -85,7 +83,7 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
         )
         private val recommendList = listOf(
             Pick(
-                "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20221224_60%2F1671816481138jef1l_JPEG%2F459050D4-7A5D-4429-86F4-99DF7F5FDBA4.jpeg",
+                "http://ticket.interpark.com/Gate/OtherSite/NaverTotalSearchGate.asp?fn=mgoodsdetail&r1=19018396",
                 "혜화",
                 "2.1km",
                 "연극 '옥탑방 고양이'",
@@ -93,7 +91,7 @@ class RecommendFragment : BindingFragment<FragmentRecommendBinding>(R.layout.fra
                 "저녁 - 피터팬스테이크"
             ),
             Pick(
-                "https://www.google.co.kr/url?sa=i&url=https%3A%2F%2Fv.daum.net%2Fv%2F20220315111331997&psig=AOvVaw3JL5WM02_gK-XWQZa7n3pB&ust=1691407654831000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiqwNb2x4ADFQAAAAAdAAAAABAE",
+                "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA1MDdfMjU5%2FMDAxNjUxOTIxNDM2MzA3.uO8hCBHbAkPPrLqlxrRRKfcyMPfpMiYNQEVNXAu2U8Ig.pMVY_Sit88_1OCInyv37i_dIRROq7WyDDWNKcEeafCcg.JPEG.parkhj1117%2Foutput_499791020.jpg&type=a340",
                 "잠실",
                 "4.3km",
                 "카페 - 진저베어",
