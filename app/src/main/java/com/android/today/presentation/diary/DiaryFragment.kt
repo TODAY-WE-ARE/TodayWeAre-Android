@@ -20,7 +20,6 @@ class DiaryFragment :
         binding.lifecycleOwner = viewLifecycleOwner
         binding.vm = diaryViewModel
         initAdapter()
-
     }
 
     private fun initAdapter() {
@@ -48,4 +47,3 @@ class DiaryFragment :
         )
     }
 }
-

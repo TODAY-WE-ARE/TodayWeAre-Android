@@ -28,26 +28,26 @@
         <TextView
             android:id="@+id/iv_main_box_ggim"
             android:layout_width="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="15dp"
             android:layout_height="40dp"
-            android:text="찜"
-            android:gravity="center"
-            android:textColor="@color/black"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="찜"
+            android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
         <TextView
-            android:id="@+id/tv_scrap_recommend"
+            android:id="@+id/tv_recommend_recommend"
             android:layout_width="50dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp"
             android:layout_height="40dp"
-            android:text="추천"
-            android:gravity="center"
-            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="추천"
+            android:textColor="@color/black"
             app:layout_constraintStart_toEndOf="@+id/iv_main_box_ggim"
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
@@ -64,15 +64,6 @@
             app:layout_constraintStart_toStartOf="@+id/iv_recommend_top"
             app:layout_constraintTop_toTopOf="@+id/iv_recommend_top" />
 
-        <ImageView
-            android:id="@+id/iv_main_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/iv_logo"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/iv_recommend_top"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <TextView
             android:id="@+id/tv_recommend_star"
             android:layout_width="115dp"
@@ -84,22 +75,24 @@
             android:text="별점순"
             android:textColor="@color/black"
             android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+            app:layout_constraintTop_toBottomOf="@id/iv_recommend_top" />
 
         <TextView
             android:id="@+id/tv_recommend_km"
             android:layout_width="115dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
             android:gravity="center"
             android:text="거리순"
-            android:textSize="14sp"
             android:textColor="@color/black"
-            android:background="@drawable/shape_white_fill_30_inactive"
+            android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/tv_recommend_star"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+            app:layout_constraintTop_toBottomOf="@id/iv_recommend_top" />
 
         <TextView
             android:id="@+id/tv_recommend_popular"
@@ -112,8 +105,9 @@
             android:text="인기순"
             android:textColor="@color/black"
             android:textSize="14sp"
+            android:visibility="gone"
             app:layout_constraintStart_toEndOf="@+id/tv_recommend_km"
-            app:layout_constraintTop_toBottomOf="@id/iv_main_logo" />
+            app:layout_constraintTop_toBottomOf="@id/iv_recommend_top" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_recommend"

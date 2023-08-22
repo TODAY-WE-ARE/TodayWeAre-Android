@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import com.android.today.R
 import com.android.today.databinding.FragmentMainBinding
-import com.android.today.presentation.result.ResultFragment
 import com.android.today.util.binding.BindingFragment
 import com.android.today.util.extension.setSingleOnClickListener
 
@@ -18,7 +17,13 @@ class MainFragment : BindingFragment<FragmentMainBinding>(R.layout.fragment_main
 
     private fun initResultBtnClickListener() {
         binding.tvMainRecommend.setSingleOnClickListener {
-            startActivity(Intent(requireActivity(), ResultFragment::class.java))
+            startActivity(Intent(requireActivity(), ResultActivity::class.java))
         }
     }
+
+   /*private fun initMainRadioClickListener() {
+        binding.rgMainRadiogroup.setOnCheckedChangeListener { _, checkedId ->
+            setSelectedReasonId(checkedId)
+        }
+    }*/
 }

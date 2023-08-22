@@ -45,7 +45,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{data.content1}"
-            android:textSize="18sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
@@ -58,7 +57,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{data.content2}"
-            android:textSize="18sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"
@@ -71,7 +69,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{data.content3}"
-            android:textSize="18sp"
             android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"
@@ -105,42 +102,21 @@
             tools:background="@color/black" />
 
         <ImageView
-            android:id="@+id/iv_heart_1"
+            android:id="@+id/iv_heart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/iv_fullHeart"
+            android:src="@drawable/iv_heart_active"
             app:layout_constraintStart_toStartOf="@+id/iv_main_box_6"
             app:layout_constraintTop_toTopOf="@+id/iv_main_box_6"
             android:layout_marginStart="325dp"
             android:layout_marginTop="10dp" />
 
         <ImageView
-            android:id="@+id/iv_star1"
+            android:id="@+id/iv_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
             android:layout_marginTop="7dp"
-            android:src="@drawable/iv_smallStar"
-            app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
-            app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
-
-        <ImageView
-            android:id="@+id/iv_star2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="7dp"
-            android:src="@drawable/iv_smallStar"
-            app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
-            app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
-
-        <ImageView
-            android:id="@+id/iv_star3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="7dp"
-            android:src="@drawable/iv_smallStar"
+            android:src="@drawable/iv_stars"
             app:layout_constraintStart_toStartOf="@+id/iv_jamsil_1"
             app:layout_constraintTop_toBottomOf="@+id/iv_jamsil_1" />
 

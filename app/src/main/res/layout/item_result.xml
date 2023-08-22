@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.android.today.data.ResultData" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_result"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_result_place"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="@{data.place}"
+            android:background="@drawable/shape_purple_2_fill_30_rect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="진저베어"
+            android:paddingVertical="10dp"
+            android:paddingStart="90dp"/>
+
+        <ImageView
+            android:id="@+id/iv_result_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_pin"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/cl_result"/>
+
+        <TextView
+            android:id="@+id/tv_result_category"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@drawable/shape_white_fill_30_inactive"
+            android:gravity="center"
+            android:text="@{data.category}"
+            app:layout_constraintBottom_toBottomOf="@id/tv_result_place"
+            app:layout_constraintStart_toStartOf="@id/tv_result_place"
+            app:layout_constraintTop_toTopOf="@id/tv_result_place"
+            tools:text="카페" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

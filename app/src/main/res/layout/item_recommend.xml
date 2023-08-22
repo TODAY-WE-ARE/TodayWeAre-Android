@@ -6,7 +6,7 @@
 
         <variable
             name="data"
-            type="com.android.today.data.Recommend" />
+            type="com.android.today.data.Pick" />
 
     </data>
 
@@ -20,15 +20,15 @@
 
         <ImageView
             android:id="@+id/iv_recommend_image"
-            setCircleImage="@{data.image}"
             android:layout_width="110dp"
+            setImage="@{data.image}"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
+            android:scaleType="fitXY"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:background="@color/black" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <ImageView
             android:id="@+id/iv_recommend_stars"
@@ -43,13 +43,25 @@
             android:layout_marginStart="20dp"/>
 
         <ImageView
-            android:id="@+id/ic_recommend_heart"
+            android:id="@+id/ic_recommend_heart_active"
+            android:src="@drawable/iv_heart_active"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintTop_toTopOf="@id/cl_recommend"
+            app:layout_constraintEnd_toEndOf="@id/cl_recommend"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageView
+            android:id="@+id/ic_recommend_heart_inactive"
             android:src="@drawable/iv_heart_inactive"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             app:layout_constraintDimensionRatio="1"
             app:layout_constraintTop_toTopOf="@id/cl_recommend"
             app:layout_constraintEnd_toEndOf="@id/cl_recommend"
+            android:visibility="invisible"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"/>
 
@@ -61,15 +73,16 @@
             android:textSize="17dp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="@id/cl_recommend"
-            app:layout_constraintEnd_toStartOf="@id/ic_recommend_heart"
+            app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
             tools:text="혜화 (hyehwa)"/>
 
         <TextView
             android:id="@+id/tv_recommend_content_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{data.content1}"
             app:layout_constraintTop_toBottomOf="@id/tv_recommend_place"
             app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
             tools:text="연극 '옥탑방 고양이'"
@@ -80,21 +93,35 @@
             android:id="@+id/tv_recommend_content_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{data.content2}"
             app:layout_constraintTop_toBottomOf="@id/tv_recommend_content_1"
             app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
             tools:text="카페 - 에이라운드"
             android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"/>
 
-
         <TextView
             android:id="@+id/tv_recommend_content_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{data.content3}"
             app:layout_constraintTop_toBottomOf="@id/tv_recommend_content_2"
             app:layout_constraintStart_toEndOf="@id/iv_recommend_image"
             tools:text="저녁 - 피터팬스테이크"
             android:layout_marginStart="20dp"
             android:layout_marginTop="7dp"/>
+
+        <TextView
+            android:id="@+id/tv_recommend_km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.km}"
+            android:textSize="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="3.5km"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -26,15 +26,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/iv_main_logo"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/iv_logo"
-            app:layout_constraintBottom_toBottomOf="@id/iv_main_top"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="diary"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_main_top"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_diary"

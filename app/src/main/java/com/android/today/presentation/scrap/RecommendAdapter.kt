@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.android.today.data.Recommend
+import com.android.today.data.Pick
 import com.android.today.databinding.ItemRecommendBinding
 import com.android.today.util.extension.ItemDiffCallback
 
 class RecommendAdapter :
-    ListAdapter<Recommend, RecommendAdapter.RecommendationViewHolder>(recommendationDiffUtil) {
+    ListAdapter<Pick, RecommendAdapter.RecommendationViewHolder>(recommendationDiffUtil) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -32,13 +32,13 @@ class RecommendAdapter :
 
     class RecommendationViewHolder(private val binding: ItemRecommendBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: Recommend) {
+        fun onBind(data: Pick) {
             binding.data = data
         }
     }
 
     companion object {
-        private val recommendationDiffUtil = ItemDiffCallback<Recommend>(
+        private val recommendationDiffUtil = ItemDiffCallback<Pick>(
             onItemsTheSame = { old, new -> old.image == new.image },
             onContentsTheSame = { old, new -> old == new }
         )
